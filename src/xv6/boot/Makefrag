@@ -18,7 +18,7 @@ $(OBJDIR)/boot/main.o: boot/main.c
 
 $(OBJDIR)/boot/boot: $(BOOT_OBJS)
 	@echo + ld boot/boot
-	$(V)$(LD) $(LDFLAGS) -N -e start -Ttext 0x7C00 -o $@.out $^
+	$(V)$(LD) $(LDFLAGS) -N -e start -Ttext 0x7C00 -o $@.out $^ #-e 指定入口函数, -Ttext 指定 text段从哪里开始
 	$(V)$(OBJDUMP) -S $@.out >$@.asm
 	$(V)$(OBJCOPY) -S -O binary -j .text $@.out $@
 	$(V)perl boot/sign.pl $(OBJDIR)/boot/boot
