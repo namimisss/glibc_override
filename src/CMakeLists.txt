@@ -6,6 +6,8 @@ add_subdirectory(glibc)
 
 add_subdirectory(xv6)
 
+add_subdirectory(tiny_renderer)
+
 
 
 
