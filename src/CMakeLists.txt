@@ -4,6 +4,8 @@ add_library(SRC_LIB INTERFACE)
 
 add_subdirectory(glibc)
 
+add_subdirectory(xv6)
+
 
 
 
