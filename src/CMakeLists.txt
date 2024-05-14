@@ -8,9 +8,6 @@ add_subdirectory(xv6)
 
 add_subdirectory(tiny_renderer)
 
-add_subdirectory(system_programming)
-
-
 # xv6
 #add_custom_command
 
